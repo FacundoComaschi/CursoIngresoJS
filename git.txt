@@ -1,1 +1,5 @@
-Hola GIT !ss
+Hola GIT !
+git status (muestra los cambios que se hicieron)
+git add . (se agregan los cambios)
+git commit-m "Se agrega un comentario"
+git push orgin master (master es el nombre de la rama)
