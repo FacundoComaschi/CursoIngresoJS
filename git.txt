@@ -1,5 +1,8 @@
 Hola GIT !
+git clone https://github.com/FacundoComaschi/CursoIngresoJS.git
+clona la carpeta desde nuestro perfil
 git status (muestra los cambios que se hicieron)
 git add . (se agregan los cambios)
 git commit-m "Se agrega un comentario"
 git push orgin master (master es el nombre de la rama)
+git pull origin master (actualiza nuestra carpeta con lo que esta en la pagina git)
