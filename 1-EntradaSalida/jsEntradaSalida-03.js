@@ -4,7 +4,6 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	var nombre;
-	//nombre = ID.value;
 	nombre = txtIdNombre.value;
 	alert (nombre);
 }
