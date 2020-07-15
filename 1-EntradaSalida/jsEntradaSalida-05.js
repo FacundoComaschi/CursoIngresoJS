@@ -5,10 +5,10 @@ function mostrar()
 {	
 	var nombre;
 	var edad;
-	var nombreedad;
 	nombre = txtIdNombre.value;
 	edad = txtIdEdad.value;
-	nombreedad = nombre+edad;
-	alert ("Usted se llama "+nombreedad)+("y tiene"+edad);
+	alert ("Usted se llama "+nombre+" y tiene "+edad);
+	//operadores aritmeticos: +-*/%
 }
+
 
