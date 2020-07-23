@@ -6,7 +6,9 @@ function mostrar()
 	var minimo;
 	var numeroRandom1AlCubo;
 	var numeroRandom2AlCubo;
+	var mensaje;
 
+	mensaje == "";
 	maximo = 52;
 	minimo = 1;
 
@@ -19,15 +21,15 @@ function mostrar()
 	
 	
 	if (numeroRandom1 % 2 == 0 && numeroRandom2 % 2 == 0) {
-		alert ("multiplicacion de pares " + numeroRandom1 * numeroRandom2);
+		mensaje = ("multiplicacion de pares " + numeroRandom1 * numeroRandom2);
 		
 	} else {
 		if(numeroRandom1 % 2 != 0 && numeroRandom2 % 2 != 0) {
-		alert ("resta impares "+(numeroRandom1 - numeroRandom2));
+		mensaje= ("resta impares "+(numeroRandom1 - numeroRandom2));
 		}else {
 			
 			if (numeroRandom1 % 5 == 0 && numeroRandom2 % 5 == 0) {
-				alert ("elevar al cubo " + numeroRandom1AlCubo + "elevar al cubo " +numeroRandom2AlCubo);
+				mensaje = mensaje + ("elevar al cubo " + numeroRandom1AlCubo + "elevar al cubo " +numeroRandom2AlCubo);
 			
 			}else alert ("no ocurrio nada");
 		}

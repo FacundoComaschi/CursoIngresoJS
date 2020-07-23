@@ -10,5 +10,48 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
-}
+     var cantidadDeLamparas;
+     var marca;
+     var precioConDescuento;
+     var IIBB;
+    
+     IIBB = 0.10;
+
+     cantidadDeLamparas = txtIdCantidad.value;
+     marca = Marca.value;
+     txtIdprecioDescuento.value = precioConDescuento;
+     
+     if (cantidadDeLamparas >= 6){
+         precioConDescuento = ((cantidadDeLamparas * 35) * 0.50)
+     
+        }else if (cantidadDeLamparas == 5 && marca == "ArgentinaLuz"){
+         alert ((cantidadDeLamparas * 35) * 0.60);
+     
+        }else if (cantidadDeLamparas == 5 && marca != "ArgentinaLuz"){
+         alert ((cantidadDeLamparas * 35 ) * 0.70);
+     
+        }else if (cantidadDeLamparas == 4 && marca == "ArgentinaLuz"){
+         alert ((cantidadDeLamparas * 35) * 0.75);
+     
+        }else if (cantidadDeLamparas == 4 && marca == "FelipeLamparas"){
+         alert ((cantidadDeLamparas * 35) * 0.75);
+    
+        }else if (cantidadDeLamparas == 4){
+         alert ((cantidadDeLamparas * 35 ) * 0.80);
+     
+        }else if (cantidadDeLamparas == 3 && marca == "ArgentinaLuz"){
+         alert ((cantidadDeLamparas * 35) * 0.85);
+     
+        }else if (cantidadDeLamparas == 3 && marca == "FelipeLamparas"){
+         alert ((cantidadDeLamparas * 35) * 0.90);
+     
+        }else if (cantidadDeLamparas == 3){
+         alert ((cantidadDeLamparas * 35) * 0.95);
+     
+        }
+
+    } if (cantidadDeLamparas > 120){
+    alert ("usted pago " + (cantidadDeLamparas * IIBB) + " de ingresos brutos");
+    txtIdprecioDescuento.value = precioConDescuento;
+} 
+
