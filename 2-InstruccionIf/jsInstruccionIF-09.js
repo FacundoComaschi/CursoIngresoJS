@@ -6,33 +6,32 @@ function mostrar()
 	var minimo;
 	var numeroRandom1AlCubo;
 	var numeroRandom2AlCubo;
-	
+
 	maximo = 52;
 	minimo = 1;
-	
-	
+
 	numeroRandom1 = Math.floor(Math.random() * (maximo - minimo)) + minimo;
 	numeroRandom2 = Math.floor(Math.random() * (maximo - minimo)) + minimo;
 
 	numeroRandom1AlCubo = Math.pow(numeroRandom1,3);
 	numeroRandom2AlCubo = Math.pow(numeroRandom2,3);
 	
-	if (numeroRandom1 % 2 == 0 && numeroRandom2 % 2 ==0) {
-		alert (numeroRandom1 * numeroRandom2);
+	
+	
+	if (numeroRandom1 % 2 == 0 && numeroRandom2 % 2 == 0) {
+		alert ("multiplicacion de pares " + numeroRandom1 * numeroRandom2);
 		
 	} else {
-		if (numeroRandom1 % 2 == 1 && numeroRandom2 %2 ==1) {
-			alert (numeroRandom1 - numeroRandom2);
-			} 
+		if(numeroRandom1 % 2 != 0 && numeroRandom2 % 2 != 0) {
+		alert ("resta impares "+(numeroRandom1 - numeroRandom2));
+		}else {
+			
+			if (numeroRandom1 % 5 == 0 && numeroRandom2 % 5 == 0) {
+				alert ("elevar al cubo " + numeroRandom1AlCubo + "elevar al cubo " +numeroRandom2AlCubo);
+			
+			}else alert ("no ocurrio nada");
 		}
-			if (numeroRandom1 % 5 == 0) {
-				alert (numeroRandom1AlCubo);
-				
-			}else {
-				if (numeroRandom2 % 5 == 0) {
-					alert (numeroRandom2AlCubo);
-				}
-			}
+	}
 
 }  
 //el minimo esta incluido y el maximo no. esta forma me va
