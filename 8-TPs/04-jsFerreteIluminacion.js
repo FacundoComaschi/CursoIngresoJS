@@ -19,39 +19,41 @@ function CalcularPrecio ()
 
      cantidadDeLamparas = txtIdCantidad.value;
      marca = Marca.value;
-     txtIdprecioDescuento.value = precioConDescuento;
+     
      
      if (cantidadDeLamparas >= 6){
-         precioConDescuento = ((cantidadDeLamparas * 35) * 0.50)
+         precioConDescuento = ((cantidadDeLamparas * 35) * 0.50);
      
         }else if (cantidadDeLamparas == 5 && marca == "ArgentinaLuz"){
-         alert ((cantidadDeLamparas * 35) * 0.60);
+            precioConDescuento = ((cantidadDeLamparas * 35) * 0.60);
      
         }else if (cantidadDeLamparas == 5 && marca != "ArgentinaLuz"){
-         alert ((cantidadDeLamparas * 35 ) * 0.70);
+            precioConDescuento = ((cantidadDeLamparas * 35 ) * 0.70);
      
         }else if (cantidadDeLamparas == 4 && marca == "ArgentinaLuz"){
-         alert ((cantidadDeLamparas * 35) * 0.75);
+            precioConDescuento = ((cantidadDeLamparas * 35) * 0.75);
      
         }else if (cantidadDeLamparas == 4 && marca == "FelipeLamparas"){
-         alert ((cantidadDeLamparas * 35) * 0.75);
+            precioConDescuento = ((cantidadDeLamparas * 35) * 0.75);
     
         }else if (cantidadDeLamparas == 4){
-         alert ((cantidadDeLamparas * 35 ) * 0.80);
+            precioConDescuento = ((cantidadDeLamparas * 35 ) * 0.80);
      
         }else if (cantidadDeLamparas == 3 && marca == "ArgentinaLuz"){
-         alert ((cantidadDeLamparas * 35) * 0.85);
+            precioConDescuento = ((cantidadDeLamparas * 35) * 0.85);
      
         }else if (cantidadDeLamparas == 3 && marca == "FelipeLamparas"){
-         alert ((cantidadDeLamparas * 35) * 0.90);
+            precioConDescuento = ((cantidadDeLamparas * 35) * 0.90);
      
         }else if (cantidadDeLamparas == 3){
-         alert ((cantidadDeLamparas * 35) * 0.95);
+            precioConDescuento = ((cantidadDeLamparas * 35) * 0.95);
      
-        }
+        }else if (cantidadDeLamparas <=2){
+            precioConDescuento = (cantidadDeLamparas * 35);
 
-    } if (cantidadDeLamparas > 120){
-    alert ("usted pago " + (cantidadDeLamparas * IIBB) + " de ingresos brutos");
-    txtIdprecioDescuento.value = precioConDescuento;
-} 
+        }if (cantidadDeLamparas > 120){
+            alert ("usted pago " + (cantidadDeLamparas * IIBB) + " de ingresos brutos");
+        } txtIdprecioDescuento.value = precioConDescuento;
+
+    } 
 

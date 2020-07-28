@@ -1,11 +1,29 @@
 function mostrar()
 {
-	//tomo el mes
 	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+	switch (mesDelAño){
+		case ("Febrero"):
+			alert ("este mes tiene 28");
+			break;
+
+		case ("Abril"):
+		
+		case ("Junio"):
+
+		case ("Septiembre"):
+
+		case ("Noviembre"):
+			alert ("este mes tiene 30");
+			break;
+
+		default:
+			alert ("este mes tiene 31");
+			break;
+
+	}
 	
 	
 
 
 
-}//FIN DE LA FUNCIÓN
+}
