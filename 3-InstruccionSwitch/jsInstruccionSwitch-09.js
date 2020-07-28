@@ -11,15 +11,53 @@ function mostrar()
 	var destino = txtIdDestino.value;
 	var estadia = 15000;
 	
-	switch (estacionIngresada){
-		case ("Invierno"):
-			switch (destino){
-				case ("Bariloche"):
-					alert ( (estadia * 0.80) + estadia);
-					break;
-			}
+	switch (estacionIngresada + destino){
+		case "Invierno" + "Bariloche":
+			alert (estadia * 1.20);
+			break;
 
-	}
+		case "Invierno" + "Cordoba":
+			alert (estadia * 1.10);
+			break;
+
+		case "Invierno" + "Cataratas":
+			alert (estadia * 1.10);
+			break;
+
+		case "Invierno" + "Mar del plata":
+			alert (estadia * 0.80);
+			break;
 		
+		case "Verano" + "Bariloche":
+			alert (estadia * 0.80);
+			break;
 
+		case "Verano" + "Cordoba":
+			alert (estadia * 1.10);
+			break;
+
+		case "Verano" + "Cataratas":
+			alert (estadia * 1.10);
+			break;
+
+		case "Verano" + "Mar del plata":
+			alert (estadia * 1.20);
+			break;
+		
+		
+	}	switch (estacionIngresada){
+			case "Otoño":
+			case "Primavera":
+				switch (destino){
+					case "Bariloche":
+					case "Cataratas":
+					case "Mar del plata":
+						alert (estadia * 1.10);
+						break;
+					case "Cordoba":
+						alert (estadia);
+						break;
+				}
+		
+		}
 }
