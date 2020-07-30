@@ -8,11 +8,19 @@ function mostrar()
 	acumulador=0;
 
 	while (contador <5) {
-		contador = contador + 1
+		
 		numeroIngresado = prompt ("ingrese el " + contador + " numero ");
 		numeroIngresado = parseInt (numeroIngresado);
+		
+		while(isNaN(numeroIngresado)){
+			numeroIngresado = prompt ("ingrese un numero valido");
+			numeroIngresado = parseInt(numeroIngresado);
+		}
 		acumulador = acumulador + numeroIngresado;
+		contador = contador + 1
+	
 	}
+
 	
 	
 	txtIdSuma.value=acumulador;

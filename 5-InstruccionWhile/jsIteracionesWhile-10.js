@@ -17,13 +17,18 @@ function mostrar()
 	var numeroIngresado;
 	var sumaNegativos=0;
 
+	numeroIngresado= prompt("ingrese numero");
 	respuesta="si";
-
-	while(respuesta=="si")
-	{
+	
+	while(respuesta=="si"){
 		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+		respuesta=confirm("desea continuar?");
+		
+		while (numeroIngresado< 0){
+			sumaNegativos = numeroIngresado + numeroIngresado;
+		}
+	}
+
 
 	document.write("la suma de negativos es :"+sumaNegativos);
 }//FIN DE LA FUNCIÓN
