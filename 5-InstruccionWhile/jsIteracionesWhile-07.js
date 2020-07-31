@@ -5,12 +5,12 @@ e informar la suma acumulada y el promedio.
 function mostrar()
 {
 	var contador;
-	var respuesta;
 	var cantidadNumeros;
 	var acumulador;
+	var numeroIngresado
 	
 	contador = 0;
-	respuesta = true;
+	cantidadNumeros = true;
 	acumulador = 0;
 	
 	cantidadNumeros = prompt ("cuantos numeros desea inggresar");
@@ -22,11 +22,12 @@ function mostrar()
 		
 	}while (contador < cantidadNumeros){
 		contador++;
-		acumulador = prompt ("ingrese su numero a sumar");
-		acumulador = acumulador + acumulador;
-	}while (acumulador + acumulador)
-		
+		numeroIngresado = prompt ("ingrese su numero " + contador +"° a sumar");
+		numeroIngresado = parseInt(numeroIngresado);
+		acumulador += numeroIngresado;
+	}
+	
 	
 	txtIdSuma.value = acumulador;
-	txtIdPromedio.value= acumulador / cantidadNumeros;
+	txtIdPromedio.value = acumulador / cantidadNumeros;
 }

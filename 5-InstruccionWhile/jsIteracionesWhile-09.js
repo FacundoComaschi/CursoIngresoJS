@@ -3,44 +3,37 @@ Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
 {	// declarar variables
-	var respuesta;
 	var maximo;
 	var minimo;
-	var numero;
-	var primeravez;
+	var primeraVez;
+	var numeroIngresado;
+	var respuesta;
 
 	respuesta = true;
-	primeravez = true;
+	primeraVez = true;
+	
+	while (respuesta){
 
-	while (respuesta) {
-		
 		do {
-			numero = prompt("ingrese numero");
-			numero = parseInt(numero);
-		
-		} while (isNaN(numero));	
+			numeroIngresado = prompt("ingrese numero");
+			numeroIngresado = parseInt(numeroIngresado)
+		} while (isNaN(numeroIngresado));
 
+		if (primeraVez) {
+			primeraVez= false;
+
+			maximo= numeroIngresado;
+			minimo= numeroIngresado;
 			
-
-		if (primeravez){
-			primeravez = false;
-
-			maximo = numero;
-			minimo = numero;
-		}else {
-			if (numero > maximo){
-				maximo = numero;
-			}
-			if (numero < minimo){
-				minimo = numero;
+		}else{
+			if (numeroIngresado<minimo) {
+				minimo = numeroIngresado;
+				
 			}
 		}
 
-
-
-		respuesta = confirm ("desea continuar");
-	
+		respuesta = confirm("Desea continuar?")
 	}
-	txtIdMaximo.value = maximo;
-	txtIdMinimo.value = minimo;
+		txtIdMinimo.value = minimo;
+		txtIdMaximo.value = maximo;
 }//FIN DE LA FUNCIÓN
