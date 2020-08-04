@@ -37,12 +37,12 @@ function mostrar() {
 		}
 		if(numeroIngresado > 0){
 			sumaDePositivos = sumaDePositivos + numeroIngresado;
-			sumaDePositivos = parseInt(sumaDePositivos);
+			//sumaDePositivos = parseInt(sumaDePositivos); no hace falta
 			contadorPositivos++;
 		}else {
 			if (numeroIngresado < 0){
 				sumaNegativos = sumaNegativos + numeroIngresado;
-				sumaNegativos =parseInt(sumaNegativos);
+				//sumaNegativos =parseInt(sumaNegativos); no hace falta
 				contadorNegativos++
 			}else {
 				cantidad0++;
@@ -59,9 +59,13 @@ function mostrar() {
 		
 	}
 
-		promediopositivo = sumaDePositivos / contadorPositivos;
-		promedionegativo = sumaNegativos / contadorNegativos;
-		difAmbos = sumaDePositivos + sumaNegativos;
+		if (contadorPositivos > 0){
+		promediopositivo = sumaDePositivos / contadorPositivos;}
+		
+		if(contadorPositivos > 0){
+		promedionegativo = sumaNegativos / contadorNegativos;}
+		
+		difAmbos = sumaDePositivos - sumaNegativos;
 
 	document.write("suma de positivos es = " + sumaDePositivos + "<br>");
 

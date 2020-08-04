@@ -1,7 +1,11 @@
 function mostrar()
 {
-	alert("ok");
+	for (var numero =0;;){
+		numero++;
+		console.log(numero);
+		if (numero==3){
+			break;
+		}
+	}
 
-
-
-}//FIN DE LA FUNCIÓN
+}

@@ -1,7 +1,14 @@
 function mostrar()
 {
-	alert("ok");
+	for (var numero =0;;){
+		numero++;
+		console.log(numero);
+		if (numero==9){
+			break;
+		}
+	}
+}
 
-
-
-}//FIN DE LA FUNCIÓN
+//for(var numero; numero !=9; ){
+//	numero = prompt("ingrese numero");
+//}
