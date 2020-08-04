@@ -7,7 +7,7 @@ function mostrar() {
 	var multipNegativos=1;
 	var respuesta;
 	var numeroIngresado;
-	
+	var flag;
 	respuesta ="si";
 
 	while (respuesta != "no"){
@@ -25,6 +25,7 @@ function mostrar() {
 			sumaDePositivos = parseInt(sumaDePositivos);
 		}else {
 			if (numeroIngresado < 0){
+				flag = 1;
 				multipNegativos = multipNegativos * numeroIngresado;
 				multipNegativos =parseInt(multipNegativos);
 			}
@@ -34,7 +35,9 @@ function mostrar() {
 		
 	
 	}
-
+	if(flag ==0 ){
+		multipNegativos == 0;
+	}
 	txtIdProducto.value= multipNegativos;
 		txtIdSuma.value= sumaDePositivos;
 		
