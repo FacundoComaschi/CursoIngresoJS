@@ -18,7 +18,7 @@ function mostrar()
             break;
 
         case "África" + "MercadoPago":
-            precioPorDia = precioPorDia * 0.75;
+            precioPorDia = precioPorDia * 0.55;
             alert("debe pagar " + precioPorDia * dias);
             break;
 

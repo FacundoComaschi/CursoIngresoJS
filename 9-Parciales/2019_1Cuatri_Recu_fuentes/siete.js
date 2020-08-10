@@ -1,45 +1,67 @@
 function mostrar()
 {
-    var bolsas;
-    var kilos;
-    var promedio;
     var contador=0;
-    var cantidadKilos=0;
+    var tipoBolsa;
+    var pesoBolsa;
     var cantidadBolsas=0;
-    var carne=0;
+    var pesoTotal=0;
+    var promedio;
+    var banderaMasLiviano = "primera vez";
+    var pesoMasLiviano;
+    var tipoMasLiviano;
+    var contadorCarne=0;
+    var sumaPesoCarne=0;
     var promedioCarne;
 
+    while (contador<3){
 
-    while (contador < 10) {
-        
-        bolsas = prompt("ingrese sabor");
-        
-        while (bolsas != "carne" && bolsas != "vegetales" && bolsas != "pollo"){
-            cantidadBolsas++;
-            bolsas = prompt ("ingrese carne pollo o vegetales")
-        
+        tipoBolsa= prompt("ingrese el sabor del alimento");
+
+        while (tipoBolsa != "carne" && tipoBolsa != "pollo" && tipoBolsa != "vegetales"){
+
+            tipoBolsa = prompt ("ingrese carne pollo o vegetales");
         }
 
-        kilos= prompt("ingrese peso");
+        pesoBolsa = prompt("ingrese peso de la bolsa");
+        pesoBolsa = parseInt(pesoBolsa);
+        
+        while (pesoBolsa<=0 || pesoBolsa>500 || isNaN(pesoBolsa)){
 
-        while (isNaN(kilos) || kilos<1 || kilos>500){
-            
-            kilos = prompt("ingrese peso en numeros entre 0 y 500");
+            pesoBolsa= prompt("ingrese peso entre 1 y 500");
+            pesoBolsa = parseInt(pesoBolsa);
         }
-    
-        cantidadKilos = cantidadKilos + kilos;
+
+        pesoTotal= pesoBolsa +  pesoTotal;
+        cantidadBolsas++;
         contador++;
-        promedio = cantidadKilos / cantidadBolsas;
+        
+        if (banderaMasLiviano == "primera vez"){
+            banderaMasLiviano = "segunda vez";
 
-        if (bolsas == "carne"){
-            carne++;
-            kilos++;
+            pesoMasLiviano = pesoBolsa;
+            tipoMasLiviano = tipoBolsa;
+        }else{
+            if (pesoBolsa < pesoMasLiviano){
+
+                pesoMasLiviano = pesoBolsa;
+                tipoMasLiviano = tipoBolsa;
+            }
+
         }
     
-        promedioCarne = kilos / carne;
-       
+        switch (tipoBolsa){
+            case "carne":
+
+            contadorCarne++;
+            sumaPesoCarne = pesoBolsa + sumaPesoCarne;
+        }
+
     }
 
-    console.log ("promedio de kilos " + promedio);
-    console.log ("promedio kilos sabor carne" + promedioCarne);
+    promedio = pesoTotal / contador;
+    promedioCarne = sumaPesoCarne / contadorCarne;
+
+    console.log ("el promedio de kilos es de "+ promedio);
+    console.log ("el mas liviano es " +tipoMasLiviano + " y su peso es " + pesoMasLiviano);
+    console.log ("la cantidad de sabor carne es " + contadorCarne + " con un promedio de " + promedioCarne);
 }

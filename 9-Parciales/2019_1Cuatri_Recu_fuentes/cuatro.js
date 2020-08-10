@@ -14,16 +14,21 @@ function mostrar()
 
     if (numero1 == numero2){
 
-        alert (numero1 + " es igual a " + numero2);
+        alert ("el cuadrado del numero = "+numero1 * numero2);
 
     }
 
+   if (numero1 != numero2){
+   
     if ((numero1 % numero2) == 0){
 
         alert (numero1 - numero2);
 
-    }else alert("el resto es " + (numero1 % numero2));
+    }else alert("el resto es " + resto);
 
+    }
+   
+   
     if (resto>3){
 
         alert (resto + " el resto de la division es mayor a 3 ")
